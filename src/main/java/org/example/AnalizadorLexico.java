@@ -30,7 +30,6 @@ public class AnalizadorLexico {
 
         while (!input.isEmpty()) {
             boolean matched = false;
-            input = input.stripLeading();
             for (Map.Entry<Pattern, String> entry : patrones.entrySet()) {
                 Matcher matcher = entry.getKey().matcher(input);
                 if (matcher.find()) {
